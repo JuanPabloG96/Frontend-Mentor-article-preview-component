@@ -3,7 +3,7 @@ const shareSection = document.querySelector(".card__share");
 const socialIcon = document.querySelectorAll(".social-icon");
 
 shareBtn.forEach(btn =>{
-  btn.addEventListener('click', ()=>{
+  btn.addEventListener('mouseover', ()=>{
     shareSection.classList.toggle("show");
   })
 })
@@ -13,5 +13,6 @@ socialIcon.forEach(icon =>{
     shareSection.classList.toggle("show");
   })
 })
-
-console.log(window.innerWidth)
+window.addEventListener('click', ()=> {
+  shareSection.classList.remove("show")
+})
